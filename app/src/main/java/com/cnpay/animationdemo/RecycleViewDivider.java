@@ -14,7 +14,6 @@ import android.view.View;
 /**
  * 包   名:     com.cnpay.animationdemo
  * 版权所有:     版权所有(C)2010-2016
- * 公   司:     深圳华夏通宝信息技术有限公司
  * 版   本:          V1.0
  * 时   间:     2016/8/16 0016 18:01
  * 作   者:     zenghonghua

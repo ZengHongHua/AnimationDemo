@@ -11,17 +11,6 @@ import com.bumptech.glide.load.engine.cache.LruResourceCache;
 import com.bumptech.glide.load.engine.cache.MemorySizeCalculator;
 import com.bumptech.glide.module.GlideModule;
 
-/**
- * 包            名:      com.ck.cloudknown.glide
- * 类            名:      CustomCachingGlideModule
- * 修 改 记 录:     // 修改历史记录，包括修改日期、修改者及修改内容
- * 版 权 所 有:     版权所有(C)2010-2015
- * 公             司:     深圳华夏通宝信息技术有限公司
- *
- * @author liyuanming
- * @version V1.0
- * @date 2016/5/11
- */
 public class CustomCachingGlideModule implements GlideModule {
 
     @Override
