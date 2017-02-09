@@ -30,6 +30,14 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             getWindow().requestFeature(Window.FEATURE_CONTENT_TRANSITIONS);
             getWindow().setEnterTransition(new Fade());
         }
+//        if (Build.VERSION.SDK_INT >= 21) {
+//            Window window = getWindow();
+//            window.clearFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS | WindowManager.LayoutParams.FLAG_TRANSLUCENT_NAVIGATION);
+//            window.getDecorView().setSystemUiVisibility(View.SYSTEM_UI_FLAG_LAYOUT_FULLSCREEN | View.SYSTEM_UI_FLAG_LAYOUT_HIDE_NAVIGATION | View.SYSTEM_UI_FLAG_LAYOUT_STABLE);
+//            window.addFlags(WindowManager.LayoutParams.FLAG_DRAWS_SYSTEM_BAR_BACKGROUNDS);
+//            window.setStatusBarColor(Color.TRANSPARENT);
+//            window.setNavigationBarColor(Color.TRANSPARENT);
+//        }
         setContentView(R.layout.activity_main);
 
         final View mIv_yin = (ImageView) findViewById(R.id.main_iv_yindu);
@@ -46,6 +54,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 public void onClick(View v) {
                     Animator animator = createAnimationTwo(v);
                     animator.start();
+                    startActivity(new Intent(MainActivity.this, ToolbarActivity.class));
                 }
             });
         }

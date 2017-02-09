@@ -54,10 +54,11 @@ public class GradationActivity extends AppCompatActivity implements GradationScr
         });
     }
 
+    //滑动监听
     @Override
     public void onScrollChanged(GradationScrollView scrollView, int x, int y, int oldx, int oldy) {
-        if (y <= 0) {   //设置标题的背景颜色
-            mTextView.setBackgroundColor(Color.argb((int) 0, 63,81,181));      //变成灰色
+        if (y <= 0) {                                                    //y轴上移或者下移  设置标题的背景颜色
+            mTextView.setBackgroundColor(Color.argb((int) 0, 63,81,181));      //标题栏变成灰色
 
         } else if (y > 0 && y <= mHeight) { //滑动距离小于banner图的高度时，设置背景和字体颜色颜色透明度渐变
             float scale = (float) y / mHeight;

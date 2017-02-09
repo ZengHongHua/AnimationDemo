@@ -30,6 +30,7 @@
             android:name=".PictureDetailActivity"
             android:theme="@style/Base_2"/>
         <activity android:name=".GradationActivity"/>
+        <activity android:name=".ToolbarActivity"/>
 
         <meta-data
             android:name="glide.CustomCachingGlideModule"

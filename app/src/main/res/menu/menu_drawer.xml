@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group android:checkableBehavior="single">
+
+        <item
+            android:id="@+id/nav_camera"
+            android:icon="@mipmap/ic_menu_call"
+            android:title="电话"/>
+        <item
+            android:id="@+id/nav_gallery"
+            android:icon="@mipmap/ic_menu_camera"
+            android:title="相机"/>
+        <item
+            android:id="@+id/nav_slideshow"
+            android:icon="@mipmap/ic_menu_cc_am"
+            android:title="联系人"/>
+        <item
+            android:id="@+id/nav_manage"
+            android:icon="@mipmap/ic_menu_chat_dashboard"
+            android:title="工具"/>
+
+    </group>
+
+    <item android:title="分享和发送">
+        <menu>
+            <item
+                android:id="@+id/nav_share"
+                android:icon="@mipmap/ic_menu_share"
+                android:title="分享"/>
+            <item
+                android:id="@+id/nav_send"
+                android:icon="@mipmap/ic_menu_send"
+                android:title="发送"/>
+
+            <item
+                android:id="@+id/nav_share2"
+                android:icon="@mipmap/ic_menu_share"
+                android:title="分享"/>
+            <item
+                android:id="@+id/nav_send3"
+                android:icon="@mipmap/ic_menu_send"
+                android:title="发送"/>
+
+            <item
+                android:id="@+id/nav_share4"
+                android:icon="@mipmap/ic_menu_share"
+                android:title="分享"/>
+            <item
+                android:id="@+id/nav_send5"
+                android:icon="@mipmap/ic_menu_send"
+                android:title="发送"/>
+        </menu>
+
+    </item>
+</menu>

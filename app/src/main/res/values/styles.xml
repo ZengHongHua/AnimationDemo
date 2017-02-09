@@ -6,6 +6,9 @@
         <item name="colorPrimary">@color/colorPrimary</item>
         <item name="colorPrimaryDark">@color/colorPrimary</item>
         <item name="colorAccent">@color/colorAccent</item>
+        <item name="android:windowNoTitle">true</item>
+        <!--<item name="android:windowTranslucentStatus">false</item>-->
+        <!--<item name="android:windowTranslucentNavigation">true</item>-->
 
         <!-- 开启过度动画-->
         <!--<item name="android:windowContentTransitions">true</item>-->
@@ -37,5 +40,18 @@
         <item name="android:button">@null</item>
         <item name="android:textSize">26sp</item>
         <item name="android:textColor">#e13c3c</item>
+    </style>
+
+
+    <!-- 自定义Toolbar右上角的省略图标-->
+    <style name="SelfToolbar" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="actionOverflowButtonStyle">@style/ActionButton.Overflow.ZhiHu</item>
+    </style>
+    <style name="ActionButton.Overflow.ZhiHu" parent="android:style/Widget.Holo.Light.ActionButton.Overflow">
+        <item name="android:src">@mipmap/shenglue</item>
+    </style>
+
+    <style name="Header" parent="AppTheme">
+        <item name="colorPrimaryDark">@color/transparent</item>
     </style>
 </resources>
