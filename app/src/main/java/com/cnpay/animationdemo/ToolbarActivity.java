@@ -11,6 +11,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.RelativeLayout;
 import android.widget.Toast;
 
 /**
@@ -23,6 +24,7 @@ public class ToolbarActivity extends AppCompatActivity implements NavigationView
     private Toolbar tb;
     private DrawerLayout mDrawerLayout;
     private NavigationView mNavigationView;
+    private RelativeLayout relative;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -39,6 +41,7 @@ public class ToolbarActivity extends AppCompatActivity implements NavigationView
         tb = (Toolbar) findViewById(R.id.toolbar_tb);
         mDrawerLayout = (DrawerLayout) findViewById(R.id.drawer_layout);
         mNavigationView = (NavigationView) findViewById(R.id.nav);
+        //relative = (RelativeLayout) findViewById(R.id.relative);
 
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(this, mDrawerLayout, tb, R.string.open, R.string.close);
         mDrawerLayout.setDrawerListener(toggle);
@@ -68,8 +71,8 @@ public class ToolbarActivity extends AppCompatActivity implements NavigationView
                 return true;
             }
         });
-    }
 
+    }
 
     @Override
     public boolean onNavigationItemSelected(MenuItem item) {
