@@ -1,21 +1,19 @@
 package com.cnpay.animationdemo;
 
+import android.graphics.Color;
 import android.os.Build;
 import android.os.Bundle;
-import android.support.v7.app.ActionBar;
+import android.support.design.widget.CollapsingToolbarLayout;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.transition.Fade;
 import android.view.View;
 import android.view.Window;
-import android.widget.ImageView;
 
 /**
  * Created by zenghonghua on 2016/5/16 0016.
  */
 public class AnimationActivity extends AppCompatActivity {
-
-    private ImageView pic;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -28,13 +26,19 @@ public class AnimationActivity extends AppCompatActivity {
         setContentView(R.layout.activity_animation);
 
         Toolbar toolbar = (Toolbar) findViewById(R.id.second_toolbar);
-        pic = (ImageView) findViewById(R.id.detail_pic);
+//        setSupportActionBar(toolbar);
+//        ActionBar actionBar = getSupportActionBar();
+//        actionBar.setDisplayHomeAsUpEnabled(true);
 
-        setSupportActionBar(toolbar);
-        ActionBar actionBar = getSupportActionBar();
-        actionBar.setDisplayHomeAsUpEnabled(true);
-        actionBar.setTitle("美女图");
+        CollapsingToolbarLayout mCollapsingToolbarLayout = (CollapsingToolbarLayout) findViewById(R.id.collapse);
 
+        mCollapsingToolbarLayout.setTitleEnabled(true);
+        mCollapsingToolbarLayout.setTitle("CollapsingToolbarLayout");
+        //通过CollapsingToolbarLayout修改字体颜色
+        mCollapsingToolbarLayout.setExpandedTitleColor(Color.WHITE);//设置还没收缩时状态下字体颜色
+        mCollapsingToolbarLayout.setCollapsedTitleTextColor(Color.GREEN);//设置收缩后Toolbar上字体的颜色
+
+        toolbar.setNavigationIcon(R.mipmap.ic_back);
         //返回
         toolbar.setNavigationOnClickListener(new View.OnClickListener() {
             @Override

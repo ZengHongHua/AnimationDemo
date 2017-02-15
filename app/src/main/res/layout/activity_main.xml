@@ -26,7 +26,6 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical"
-        android:paddingTop="@dimen/activity_vertical_margin"
         app:layout_behavior="@string/appbar_scrolling_view_behavior"
         tools:context="com.cnpay.animationdemo.MainActivity"
         tools:showIn="@layout/activity_main">
@@ -35,14 +34,16 @@
             android:id="@+id/main_btn_share"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="10dp"
-            android:layout_marginTop="10dp"
             android:text="RecyclerView共享元素"/>
 
         <Button
             android:id="@+id/main_btn_gradation"
-            android:layout_marginBottom="10dp"
             android:text="滑动标题渐变"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+        <Button
+            android:id="@+id/main_btn_player"
+            android:text="视频播放"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"/>
 
@@ -58,7 +59,7 @@
             android:id="@+id/main_iv_yindu"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:src="@mipmap/ic_mei"
+            android:src="@mipmap/xxx1"
             android:transitionName="second"/>
     </LinearLayout>
 

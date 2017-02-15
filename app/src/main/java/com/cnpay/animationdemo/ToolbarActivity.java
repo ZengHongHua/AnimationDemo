@@ -50,8 +50,8 @@ public class ToolbarActivity extends AppCompatActivity implements NavigationView
         mNavigationView.setNavigationItemSelectedListener(this);
 
         tb.setNavigationIcon(R.mipmap.navigation);
-        tb.setTitle("标题");
-        tb.setSubtitle("子标题");
+//        tb.setTitle("标题");
+//        tb.setSubtitle("子标题");
         tb.setTitleTextColor(getResources().getColor(R.color.white));
         tb.setSubtitleTextColor(getResources().getColor(R.color.white));
 
@@ -62,12 +62,13 @@ public class ToolbarActivity extends AppCompatActivity implements NavigationView
                 int itemId = item.getItemId();
                 if (itemId == R.id.search1) {
                     Toast.makeText(ToolbarActivity.this, "位置1", Toast.LENGTH_SHORT).show();
-                } else if (itemId == R.id.search2) {
-                    Toast.makeText(ToolbarActivity.this, "位置2", Toast.LENGTH_SHORT).show();
-                } else if (itemId == R.id.search3) {
-                    Toast.makeText(ToolbarActivity.this, "位置3", Toast.LENGTH_SHORT).show();
-
                 }
+//                else if (itemId == R.id.search1) {
+//                    Toast.makeText(ToolbarActivity.this, "位置2", Toast.LENGTH_SHORT).show();
+//                } else if (itemId == R.id.search1) {
+//                    Toast.makeText(ToolbarActivity.this, "位置3", Toast.LENGTH_SHORT).show();
+//
+//                }
                 return true;
             }
         });

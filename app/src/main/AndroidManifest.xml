@@ -3,7 +3,14 @@
     package="com.cnpay.animationdemo"
     xmlns:android="http://schemas.android.com/apk/res/android">
 
+    <!-- 请求访问网络状态 -->
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <!-- 请求访问网络 -->
     <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+     
+    <uses-permission android:name="android.permission.WRITE_SETTINGS"/>
 
     <application
         android:name="app.MyAppliction"
@@ -32,9 +39,15 @@
         <activity android:name=".GradationActivity"/>
         <activity android:name=".ToolbarActivity"/>
 
+        <activity
+            android:name=".DetailPlayerActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:screenOrientation="portrait"/>
+
         <meta-data
             android:name="glide.CustomCachingGlideModule"
             android:value="GlideModule"/>
+
     </application>
 
 </manifest>
