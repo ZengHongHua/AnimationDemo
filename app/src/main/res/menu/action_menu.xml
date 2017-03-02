@@ -3,7 +3,6 @@
       xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <item
-
         android:id="@+id/search1"
         android:icon="@mipmap/ic_gpsicon"
         android:title="位置"
@@ -15,9 +14,9 @@
         <!--android:title="位置2"-->
         <!--app:showAsAction="ifRoom"/>-->
 
-    <!--<item-->
-        <!--android:id="@+id/search3"-->
-        <!--android:icon="@mipmap/ic_gpsicon"-->
-        <!--android:title="位置3"-->
-        <!--app:showAsAction="never"/>-->
+    <item
+        android:id="@+id/search3"
+        android:icon="@mipmap/ic_menu_send"
+        android:title="位置3"
+        app:showAsAction="ifRoom"/>
 </menu>

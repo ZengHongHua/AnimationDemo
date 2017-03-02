@@ -38,6 +38,8 @@
             android:theme="@style/Base_2"/>
         <activity android:name=".GradationActivity"/>
         <activity android:name=".ToolbarActivity"/>
+        <activity android:name=".RxUseActivity"/>
+        <activity android:name=".CustomPbActivity"/>
 
         <activity
             android:name=".DetailPlayerActivity"

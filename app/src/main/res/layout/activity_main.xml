@@ -22,46 +22,71 @@
 
     </android.support.design.widget.AppBarLayout>
 
-    <LinearLayout
+    <android.support.v4.widget.NestedScrollView
+        android:layout_marginTop="?attr/actionBarSize"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="vertical"
-        app:layout_behavior="@string/appbar_scrolling_view_behavior"
-        tools:context="com.cnpay.animationdemo.MainActivity"
-        tools:showIn="@layout/activity_main">
+        android:layout_height="wrap_content">
 
-        <Button
-            android:id="@+id/main_btn_share"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="RecyclerView共享元素"/>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior"
+            tools:context="com.cnpay.animationdemo.MainActivity"
+            tools:showIn="@layout/activity_main">
 
-        <Button
-            android:id="@+id/main_btn_gradation"
-            android:text="滑动标题渐变"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"/>
-        <Button
-            android:id="@+id/main_btn_player"
-            android:text="视频播放"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"/>
+            <Button
+                android:id="@+id/main_btn_share"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="RecyclerView共享元素"/>
 
-        <ImageView
-            android:id="@+id/main_share"
-            android:layout_width="130dp"
-            android:layout_height="80dp"
-            android:layout_marginBottom="20dp"
-            android:scaleType="centerCrop"
-            android:src="@mipmap/ic_meinv"/>
+            <Button
+                android:id="@+id/main_btn_gradation"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="滑动标题渐变"/>
 
-        <ImageView
-            android:id="@+id/main_iv_yindu"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:src="@mipmap/xxx1"
-            android:transitionName="second"/>
-    </LinearLayout>
+            <Button
+                android:id="@+id/main_btn_player"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="视频播放"/>
+
+            <Button
+                android:id="@+id/toolbarUse"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="ToolBar加側滑"/>
+
+            <Button
+                android:id="@+id/rx"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="RXjava"/>
+
+            <Button
+                android:id="@+id/btn_self"
+                android:text="自定义进度条，Dialog"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+            <ImageView
+                android:id="@+id/main_share"
+                android:layout_width="130dp"
+                android:layout_height="80dp"
+                android:layout_marginBottom="20dp"
+                android:scaleType="centerCrop"
+                android:src="@mipmap/ic_meinv"/>
+
+            <ImageView
+                android:id="@+id/main_iv_yindu"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@mipmap/xxx1"
+                android:transitionName="second"/>
+        </LinearLayout>
+    </android.support.v4.widget.NestedScrollView>
 
     <android.support.design.widget.FloatingActionButton
         android:id="@+id/fab"

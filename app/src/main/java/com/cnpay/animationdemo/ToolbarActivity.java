@@ -64,11 +64,12 @@ public class ToolbarActivity extends AppCompatActivity implements NavigationView
                     Toast.makeText(ToolbarActivity.this, "位置1", Toast.LENGTH_SHORT).show();
                 }
 //                else if (itemId == R.id.search1) {
-//                    Toast.makeText(ToolbarActivity.this, "位置2", Toast.LENGTH_SHORT).show();
-//                } else if (itemId == R.id.search1) {
-//                    Toast.makeText(ToolbarActivity.this, "位置3", Toast.LENGTH_SHORT).show();
-//
+//                    Toast.makeText(ToolbarActivity.this, "位置1", Toast.LENGTH_SHORT).show();
 //                }
+                else if (itemId == R.id.search3) {
+                    Toast.makeText(ToolbarActivity.this, "位置3", Toast.LENGTH_SHORT).show();
+
+                }
                 return true;
             }
         });

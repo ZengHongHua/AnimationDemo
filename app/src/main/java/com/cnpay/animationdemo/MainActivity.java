@@ -54,7 +54,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 public void onClick(View v) {
                     Animator animator = createAnimationTwo(v);
                     animator.start();
-                    startActivity(new Intent(MainActivity.this, ToolbarActivity.class));
                 }
             });
         }
@@ -112,6 +111,27 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             @Override
             public void onClick(View v) {
                 startActivity(new Intent(MainActivity.this, DetailPlayerActivity.class));
+            }
+        });
+
+        findViewById(R.id.rx).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(MainActivity.this, RxUseActivity.class));
+            }
+        });
+
+        findViewById(R.id.toolbarUse).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(MainActivity.this, ToolbarActivity.class));
+            }
+        });
+
+        findViewById(R.id.btn_self).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(MainActivity.this, CustomPbActivity.class));
             }
         });
 
