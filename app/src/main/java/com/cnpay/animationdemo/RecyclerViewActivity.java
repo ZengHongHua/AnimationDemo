@@ -7,7 +7,9 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.Toolbar;
+import android.transition.Fade;
 import android.view.View;
+import android.view.Window;
 import android.widget.ImageView;
 
 import java.util.ArrayList;
@@ -30,12 +32,23 @@ public class RecyclerViewActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+        getWindow().requestFeature(Window.FEATURE_CONTENT_TRANSITIONS);
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_rc);
+
+        getWindow().setEnterTransition(new Fade());
+        getWindow().setExitTransition(new Fade());
 
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar2);
         toolbar.setTitle("RecyclerView共享元素");
         toolbar.setTitleTextColor(getResources().getColor(R.color.white));
+        toolbar.setNavigationIcon(R.mipmap.ic_back);
+        toolbar.setNavigationOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                finishAfterTransition();
+            }
+        });
 
         mRecyclerView = (RecyclerView) findViewById(R.id.recyclerView);
 

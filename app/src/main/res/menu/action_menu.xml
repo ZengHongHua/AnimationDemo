@@ -18,5 +18,5 @@
         android:id="@+id/search3"
         android:icon="@mipmap/ic_menu_send"
         android:title="位置3"
-        app:showAsAction="ifRoom"/>
+        app:showAsAction="never"/>
 </menu>

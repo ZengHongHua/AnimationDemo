@@ -11,6 +11,7 @@ import android.widget.Button;
 import android.widget.ProgressBar;
 
 /**
+ * 自定义直线进度条
  * 包   名:     com.cnpay.animationdemo
  * 时   间:     2017/3/2 0002 10:06
  * 作   者:     zenghonghua

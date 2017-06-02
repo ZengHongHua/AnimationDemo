@@ -6,6 +6,7 @@ import android.content.Intent;
 import android.os.Build;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
+import android.support.v4.app.ActivityOptionsCompat;
 import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
@@ -25,11 +26,12 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+        getWindow().requestFeature(Window.FEATURE_CONTENT_TRANSITIONS);
         super.onCreate(savedInstanceState);
-        if (Build.VERSION.SDK_INT >= 21) {
-            getWindow().requestFeature(Window.FEATURE_CONTENT_TRANSITIONS);
-            getWindow().setEnterTransition(new Fade());
-        }
+//        if (Build.VERSION.SDK_INT >= 21) {
+//            getWindow().requestFeature(Window.FEATURE_CONTENT_TRANSITIONS);
+//            getWindow().setEnterTransition(new Fade());
+//        }
 //        if (Build.VERSION.SDK_INT >= 21) {
 //            Window window = getWindow();
 //            window.clearFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS | WindowManager.LayoutParams.FLAG_TRANSLUCENT_NAVIGATION);
@@ -39,6 +41,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 //            window.setNavigationBarColor(Color.TRANSPARENT);
 //        }
         setContentView(R.layout.activity_main);
+        getWindow().setEnterTransition(new Fade());
+        getWindow().setExitTransition(new Fade());
 
         final View mIv_yin = (ImageView) findViewById(R.id.main_iv_yindu);
 
@@ -72,7 +76,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                     Bundle bundle = ActivityOptions.makeSceneTransitionAnimation(MainActivity.this,
                             Pair.create(iv_share, "pic"),       //这个iv_share，还是必须是View,不然会报错，搞不懂
                             Pair.create(mIv_yin, "second")).toBundle();
-                    // start the new activity
+
                     startActivity(intent, bundle);
                 } else {
                     startActivity(new Intent(MainActivity.this, AnimationActivity.class));
@@ -96,7 +100,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         findViewById(R.id.main_btn_share).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(MainActivity.this, RecyclerViewActivity.class));
+//                startActivity(new Intent(MainActivity.this, RecyclerViewActivity.class));
+                click(RecyclerViewActivity.class);
             }
         });
 
@@ -136,6 +141,13 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         });
 
     }
+
+    public void click(Class mclass) {
+        ActivityOptionsCompat options = ActivityOptionsCompat.makeSceneTransitionAnimation(this);
+        Intent intent = new Intent(this, mclass);
+        startActivity(intent,options.toBundle());
+    }
+
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
