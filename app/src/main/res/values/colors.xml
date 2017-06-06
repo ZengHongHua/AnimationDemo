@@ -7,6 +7,9 @@
     <color name="white">#ffffff</color>
     <color name="f">#2330a3</color>
     <color name="e">#53c23d</color>
+    <color name="g">#d79d28</color>
 
 
+    <color name="black_semi_transparent">#B2000000</color>
+    <color name="text">#FFFFFF</color>
 </resources>

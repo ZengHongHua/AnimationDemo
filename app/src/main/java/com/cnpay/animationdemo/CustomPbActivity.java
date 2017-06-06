@@ -5,7 +5,6 @@ import android.os.Bundle;
 import android.os.Handler;
 import android.os.Message;
 import android.support.v7.app.AlertDialog;
-import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ProgressBar;
@@ -16,7 +15,7 @@ import android.widget.ProgressBar;
  * 时   间:     2017/3/2 0002 10:06
  * 作   者:     zenghonghua
  */
-public class CustomPbActivity extends AppCompatActivity {
+public class CustomPbActivity extends BaseActivity {
 
     private ProgressBar pb;
     private Button btn_dialog;
@@ -71,7 +70,7 @@ public class CustomPbActivity extends AppCompatActivity {
         @Override
         public void run() {
             super.run();
-            while (true) {
+            while (!Thread.interrupted()) {
                 try {
                     Thread.sleep(50);
                     progress += 2;
@@ -81,6 +80,7 @@ public class CustomPbActivity extends AppCompatActivity {
                     mHandler.sendEmptyMessage(0);
                 } catch (Exception e) {
                     e.printStackTrace();
+                    Thread.interrupted();
                 }
             }
         }

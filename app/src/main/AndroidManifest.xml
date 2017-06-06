@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<manifest
-    package="com.cnpay.animationdemo"
-    xmlns:android="http://schemas.android.com/apk/res/android">
+<manifest package="com.cnpay.animationdemo"
+          xmlns:android="http://schemas.android.com/apk/res/android">
 
     <!-- 请求访问网络状态 -->
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
@@ -28,7 +27,6 @@
                 <category android:name="android.intent.category.LAUNCHER"/>
             </intent-filter>
         </activity>
-
         <activity android:name=".RecyclerViewActivity"/>
         <activity
             android:name=".AnimationActivity"
@@ -40,11 +38,12 @@
         <activity android:name=".ToolbarActivity"/>
         <activity android:name=".RxUseActivity"/>
         <activity android:name=".CustomPbActivity"/>
-
+        <activity android:name=".TestFloatActivity"/>
         <activity
             android:name=".DetailPlayerActivity"
             android:configChanges="orientation|keyboardHidden|screenSize"
-            android:screenOrientation="portrait"/>
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme"/>
 
         <meta-data
             android:name="glide.CustomCachingGlideModule"

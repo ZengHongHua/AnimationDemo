@@ -2,7 +2,6 @@ package com.cnpay.animationdemo;
 
 import android.graphics.Color;
 import android.os.Bundle;
-import android.support.v7.app.AppCompatActivity;
 import android.view.ViewTreeObserver;
 import android.widget.ImageView;
 import android.widget.TextView;
@@ -19,7 +18,7 @@ import gradation.StatusBarUtil;
  * 时   间:     2017/1/6 0006 11:37
  * 作   者:     zenghonghua
  */
-public class GradationActivity extends AppCompatActivity implements GradationScrollView.ScrollViewListener {
+public class GradationActivity extends BaseActivity implements GradationScrollView.ScrollViewListener {
 
     GradationScrollView mScrollView;
     ImageView mImageView;

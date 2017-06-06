@@ -3,7 +3,6 @@ package com.cnpay.animationdemo;
 import android.content.pm.ActivityInfo;
 import android.content.res.Configuration;
 import android.os.Bundle;
-import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.ImageView;
 
@@ -21,7 +20,7 @@ import video.LandLayoutVideo;
  * 时   间:     2017/2/14 0014 14:18
  * 作   者:     zenghonghua
  */
-public class DetailPlayerActivity extends AppCompatActivity {
+public class DetailPlayerActivity extends BaseActivity {
 
     private LandLayoutVideo mVideo;
     private OrientationUtils orientationUtils;

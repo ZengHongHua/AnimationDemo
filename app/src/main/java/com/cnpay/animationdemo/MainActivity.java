@@ -8,25 +8,26 @@ import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.v4.app.ActivityOptionsCompat;
 import android.support.v7.app.ActionBar;
-import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
-import android.transition.ChangeTransform;
-import android.transition.Fade;
-import android.transition.Transition;
 import android.util.Pair;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewAnimationUtils;
-import android.view.Window;
 import android.view.animation.AccelerateDecelerateInterpolator;
 import android.widget.ImageView;
 
-public class MainActivity extends AppCompatActivity implements View.OnClickListener {
+import com.getbase.floatingactionbutton.FloatingActionsMenu;
+
+public class MainActivity extends BaseActivity implements View.OnClickListener {
+
+    private FloatingActionsMenu fam;
+
+    private String TAG = "-----Log";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-        getWindow().requestFeature(Window.FEATURE_CONTENT_TRANSITIONS);
+//        getWindow().requestFeature(Window.FEATURE_CONTENT_TRANSITIONS);
         super.onCreate(savedInstanceState);
 //        if (Build.VERSION.SDK_INT >= 21) {
 //            getWindow().requestFeature(Window.FEATURE_CONTENT_TRANSITIONS);
@@ -41,8 +42,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 //            window.setNavigationBarColor(Color.TRANSPARENT);
 //        }
         setContentView(R.layout.activity_main);
-        getWindow().setEnterTransition(new Fade());
-        getWindow().setExitTransition(new Fade());
+//        getWindow().setEnterTransition(new Fade());
+//        getWindow().setExitTransition(new Explode());
 
         final View mIv_yin = (ImageView) findViewById(R.id.main_iv_yindu);
 
@@ -50,6 +51,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         setSupportActionBar(toolbar);
         ActionBar supportActionBar = getSupportActionBar();
         supportActionBar.setTitle("MaterialDesign");
+        fam = (FloatingActionsMenu) findViewById(R.id.fam);
 
         FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
         if (Build.VERSION.SDK_INT >= 21) {
@@ -68,9 +70,11 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             @Override
             public void onClick(View v) {
                 if (Build.VERSION.SDK_INT >= 21) {
-                    Transition ts = new ChangeTransform();
-                    ts.setDuration(3000);
-                    getWindow().setExitTransition(ts);
+
+//                    Transition ts = new ChangeTransform();
+//                    ts.setDuration(3000);
+//                    getWindow().setExitTransition(ts);//会影响全局的Activity Transition动画
+
                     Intent intent = new Intent(MainActivity.this, AnimationActivity.class);
 //                ActivityOptions options = ActivityOptions.makeSceneTransitionAnimation(MainActivity.this,iv_share,"pic");
                     Bundle bundle = ActivityOptions.makeSceneTransitionAnimation(MainActivity.this,
@@ -84,7 +88,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             }
         });
 
-        //印度美女图片点击
+        //喝饮料美女图片点击
         ImageView iv_yindu = (ImageView) findViewById(R.id.main_iv_yindu);
         iv_yindu.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -92,6 +96,13 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 if (Build.VERSION.SDK_INT >= 21) {
                     Animator animator = createAnimation(v);
                     animator.start();
+
+                    if (!fam.isExpanded()) {
+                        fam.expand();
+                    } else {
+                        fam.collapse();
+                    }
+
                 }
             }
         });
@@ -108,35 +119,40 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         findViewById(R.id.main_btn_gradation).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(MainActivity.this, GradationActivity.class));
+                //startActivity(new Intent(MainActivity.this, GradationActivity.class));
+                click(GradationActivity.class);
             }
         });
 
         findViewById(R.id.main_btn_player).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(MainActivity.this, DetailPlayerActivity.class));
+                //startActivity(new Intent(MainActivity.this, DetailPlayerActivity.class));
+                click(DetailPlayerActivity.class);
             }
         });
 
         findViewById(R.id.rx).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(MainActivity.this, RxUseActivity.class));
+                //startActivity(new Intent(MainActivity.this, RxUseActivity.class));
+                click(RxUseActivity.class);
             }
         });
 
         findViewById(R.id.toolbarUse).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(MainActivity.this, ToolbarActivity.class));
+                //startActivity(new Intent(MainActivity.this, ToolbarActivity.class));
+                click(ToolbarActivity.class);
             }
         });
 
         findViewById(R.id.btn_self).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(MainActivity.this, CustomPbActivity.class));
+                //startActivity(new Intent(MainActivity.this, CustomPbActivity.class));
+                click(CustomPbActivity.class);
             }
         });
 

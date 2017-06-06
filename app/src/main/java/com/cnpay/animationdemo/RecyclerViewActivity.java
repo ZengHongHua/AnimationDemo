@@ -3,13 +3,10 @@ package com.cnpay.animationdemo;
 import android.app.ActivityOptions;
 import android.content.Intent;
 import android.os.Bundle;
-import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.Toolbar;
-import android.transition.Fade;
 import android.view.View;
-import android.view.Window;
 import android.widget.ImageView;
 
 import java.util.ArrayList;
@@ -25,19 +22,19 @@ import bean.Picture;
  * 时   间:     2016/8/16 0016 17:09
  * 作   者:     zenghonghua
  */
-public class RecyclerViewActivity extends AppCompatActivity {
+public class RecyclerViewActivity extends BaseActivity {
 
     private RecyclerView mRecyclerView;
     private List<Picture> mPictures;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-        getWindow().requestFeature(Window.FEATURE_CONTENT_TRANSITIONS);
+//        getWindow().requestFeature(Window.FEATURE_CONTENT_TRANSITIONS);
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_rc);
 
-        getWindow().setEnterTransition(new Fade());
-        getWindow().setExitTransition(new Fade());
+//        getWindow().setEnterTransition(new Fade());
+//        getWindow().setExitTransition(new Explode());
 
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar2);
         toolbar.setTitle("RecyclerView共享元素");

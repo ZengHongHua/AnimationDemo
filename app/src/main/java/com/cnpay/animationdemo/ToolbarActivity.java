@@ -7,7 +7,6 @@ import android.support.design.widget.NavigationView;
 import android.support.v4.view.GravityCompat;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
-import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.MenuItem;
 import android.view.View;
@@ -19,7 +18,7 @@ import android.widget.Toast;
  * 时   间:     2017/2/9 0009 13:55
  * 作   者:     zenghonghua
  */
-public class ToolbarActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
+public class ToolbarActivity extends BaseActivity implements NavigationView.OnNavigationItemSelectedListener {
 
     private Toolbar tb;
     private DrawerLayout mDrawerLayout;

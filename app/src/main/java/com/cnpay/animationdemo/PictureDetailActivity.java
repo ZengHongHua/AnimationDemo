@@ -3,7 +3,6 @@ package com.cnpay.animationdemo;
 import android.os.Build;
 import android.os.Bundle;
 import android.support.v7.app.ActionBar;
-import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.transition.Fade;
 import android.view.View;
@@ -19,7 +18,7 @@ import com.bumptech.glide.Glide;
  * 时   间:     2016/8/16 0016 18:24
  * 作   者:     zenghonghua
  */
-public class PictureDetailActivity extends AppCompatActivity {
+public class PictureDetailActivity extends BaseActivity {
 
     private ImageView pic;
 

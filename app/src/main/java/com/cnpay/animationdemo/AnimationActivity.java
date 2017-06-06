@@ -4,7 +4,6 @@ import android.graphics.Color;
 import android.os.Build;
 import android.os.Bundle;
 import android.support.design.widget.CollapsingToolbarLayout;
-import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.transition.Fade;
 import android.view.View;
@@ -13,7 +12,7 @@ import android.view.Window;
 /**
  * Created by zenghonghua on 2016/5/16 0016.
  */
-public class AnimationActivity extends AppCompatActivity {
+public class AnimationActivity extends BaseActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -51,5 +50,4 @@ public class AnimationActivity extends AppCompatActivity {
             }
         });
     }
-
 }

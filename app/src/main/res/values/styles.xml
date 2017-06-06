@@ -20,13 +20,13 @@
         <!--<item name="android:windowSharedElementExitTransition">@transition/change_image</item>-->
 
     </style>
-    
+
     <style name="Base_2" parent="AppTheme">
         <item name="colorPrimary">@color/colorPrimary</item>
         <item name="colorPrimaryDark">@color/transparent</item>
 
     </style>
-    
+
 
     <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar"/>
 
@@ -48,6 +48,7 @@
     <style name="SelfToolbar" parent="Theme.AppCompat.Light.NoActionBar">
         <item name="actionOverflowButtonStyle">@style/ActionButton.Overflow.ZhiHu</item>
     </style>
+
     <style name="ActionButton.Overflow.ZhiHu" parent="android:style/Widget.Holo.Light.ActionButton.Overflow">
         <item name="android:src">@mipmap/shenglue</item>
     </style>
@@ -70,5 +71,10 @@
             @android:drawable/progress_indeterminate_horizontal
         </item>
         <item name="android:progressDrawable">@drawable/progressbar_color</item>
+    </style>
+
+    <style name="menu_labels_style">
+        <item name="android:background">@drawable/fab_label_background</item>
+        <item name="android:textColor">@color/text</item>
     </style>
 </resources>
